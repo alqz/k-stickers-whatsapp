@@ -7,13 +7,15 @@ android {
     }
     signingConfigs {
         signing_config {
-            keyAlias 'abc'
-            keyPassword '123'
+            keyAlias 'k-stickers-key'
+            keyPassword 't6rMX7cc4d8K4iuC'
+            storeFile file('/Users/alqz/Dropbox/createbin/181025 whatsapp stickers/app-key/store')
+            storePassword 'T6ve9cxfq2Q83ygg'
         }
     }
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.example.samplestickerapp"
+        applicationId "com.alqz.kstickerswhatsapp"
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
@@ -36,6 +38,7 @@ android {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.signing_config
         }
     }
     compileOptions {
